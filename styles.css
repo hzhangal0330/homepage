@@ -1,0 +1,180 @@
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --muted: #555555;
+  --link: #1a5fb4;
+  --rule: #e3e3e3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.page {
+  width: min(860px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 24px 0 56px;
+}
+
+.top-nav {
+  display: flex;
+  gap: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 28px;
+  font-size: 15px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.intro-with-photo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 28px;
+  align-items: start;
+}
+
+.portrait-simple img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--rule);
+}
+
+.links {
+  margin-top: 16px;
+  font-size: 15px;
+}
+
+.links a + a::before {
+  content: " / ";
+  color: var(--muted);
+}
+
+.section {
+  margin-top: 26px;
+}
+
+.section h2 {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+.section h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.section p {
+  margin-bottom: 14px;
+}
+
+.section ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.section li {
+  margin-bottom: 10px;
+}
+
+.publication-list {
+  padding-left: 22px;
+}
+
+.publication-list li {
+  margin-bottom: 18px;
+}
+
+.publication-list li {
+  list-style-position: outside;
+}
+
+.pub-authors,
+.pub-title,
+.pub-meta {
+  display: block;
+}
+
+.pub-title {
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+}
+
+.pub-authors {
+  margin-bottom: 0.08rem;
+}
+
+.pub-meta {
+  color: var(--muted);
+  display: inline;
+}
+
+.publication-list a {
+  margin-left: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.publication-list a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+}
+
+@media (max-width: 720px) {
+  .page {
+    width: min(100vw - 24px, 860px);
+  }
+
+  .intro-with-photo {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-simple {
+    max-width: 180px;
+  }
+}
