@@ -132,7 +132,8 @@ h1 {
 
 .pub-authors,
 .pub-title,
-.pub-meta {
+.pub-meta,
+.pub-note {
   display: block;
 }
 
@@ -148,6 +149,12 @@ h1 {
 .pub-meta {
   color: var(--muted);
   display: inline;
+}
+
+.pub-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0.15rem 0 0.1rem 1rem;
 }
 
 .publication-list a {
